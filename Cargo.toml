@@ -10,7 +10,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 core-crypto = { git = "https://github.com/wireapp/core-crypto.git", rev = "e7473ecc7e2132cae7b723cfd873bf403eb9300b" }
-napi = "3.0.0"
+napi = { version = "3", features = ["async"] }
 napi-derive = "3.0.0"
 
 [build-dependencies]
