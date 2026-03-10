@@ -1,8 +1,9 @@
 import test from 'ava'
 
-import { plus100 } from '../index'
+import { getData, putData } from '../index'
 
-test('async function from native code', (t) => {
-  const fixture = 42
-  t.is(plus100(fixture), fixture + 100)
+test('async function from native code', async (t) => {
+  const data = "hello napi"
+  await putData(data)
+  t.is(await getData(), data)
 })
